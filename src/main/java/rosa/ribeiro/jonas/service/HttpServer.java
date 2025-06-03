@@ -8,19 +8,23 @@ import java.net.http.HttpResponse;
 import java.time.Duration;
 
 public class HttpServer {
-    private final HttpClient client;
+    private static HttpClient client = null;
 
     public HttpServer() {
-        this.client = HttpClient.newBuilder()
+        client = HttpClient.newBuilder()
                 .connectTimeout(Duration.ofSeconds(10))
                 .build();
     }
 
-    public String getBody(String usuario) throws IOException, InterruptedException {
+    public static String UriCreate(String usuario){
+        return "https://api.github.com/users/" + usuario + "/events";
+    }
 
-            String uri = "https://api.github.com/users/" + usuario + "/events";
+    public static String getBody(String usuario) throws IOException, InterruptedException {
+
+
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(uri))
+                    .uri(URI.create(UriCreate(usuario)))
                     .timeout(Duration.ofSeconds(5))
                     .GET()
                     .build();

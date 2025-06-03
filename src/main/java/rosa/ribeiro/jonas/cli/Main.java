@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.Scanner;
 
+import static rosa.ribeiro.jonas.service.HttpServer.UriCreate;
+import static rosa.ribeiro.jonas.service.Json.StringToJson;
+
 
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -13,8 +16,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Digite o usuário:");
         String usuario = scanner.nextLine();
+        System.out.println(StringToJson(UriCreate(usuario)));
 
-        System.out.println(teste.getBody(usuario));
 
     }
 }
