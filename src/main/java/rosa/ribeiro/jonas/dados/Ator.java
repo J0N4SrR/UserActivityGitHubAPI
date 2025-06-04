@@ -1,5 +1,8 @@
 package rosa.ribeiro.jonas.dados;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true )
 public class Ator {
     private int id;
     private String login;

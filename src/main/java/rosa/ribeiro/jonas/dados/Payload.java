@@ -1,8 +1,11 @@
 package rosa.ribeiro.jonas.dados;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true )
 public class Payload {
     private int repository_id;
-    private int push_id;
+    private long push_id;
     private Commit commits;
 
     public Payload() {
@@ -16,11 +19,11 @@ public class Payload {
         this.repository_id = repository_id;
     }
 
-    public int getPush_id() {
+    public long getPush_id() {
         return push_id;
     }
 
-    public void setPush_id(int push_id) {
+    public void setPush_id(long push_id) {
         this.push_id = push_id;
     }
 }
