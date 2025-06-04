@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataUtil {
-    private static int contaPush = 0;
+    private int contaPush = 0;
 
-    public static int contarEventos(GitData[] gitData, int i){
+    public int contarEventos(GitData[] gitData, int i){
 
         switch (i){
             case 1:
