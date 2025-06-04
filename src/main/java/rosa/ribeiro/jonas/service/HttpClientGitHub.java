@@ -7,20 +7,20 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 
-public class HttpServer {
-    private static HttpClient client = null;
+public class HttpClientGitHub {
+    private final HttpClient client;
 
-    public HttpServer() {
+    public HttpClientGitHub() {
         client = HttpClient.newBuilder()
                 .connectTimeout(Duration.ofSeconds(10))
                 .build();
     }
 
-    public static String UriCreate(String usuario){
+    private String UriCreate(String usuario){
         return "https://api.github.com/users/" + usuario + "/events";
     }
 
-    public static String getBody(String usuario) throws IOException, InterruptedException {
+    public String getBody(String usuario) throws IOException, InterruptedException {
 
 
             HttpRequest request = HttpRequest.newBuilder()
@@ -37,8 +37,9 @@ public class HttpServer {
                 } else {
                     throw new IOException("Erro: " + status);
                 }
+
             } else {
-                return "Não há resultado";
+                return null;
             }
     }
 }
