@@ -2,7 +2,7 @@ package rosa.ribeiro.jonas.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import rosa.ribeiro.jonas.dados.GitData;
+import rosa.ribeiro.jonas.dto.GitData;
 
 
 public class ConversorJson {

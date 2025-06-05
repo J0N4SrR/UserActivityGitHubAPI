@@ -1,6 +1,6 @@
 package rosa.ribeiro.jonas.service;
 
-import rosa.ribeiro.jonas.dados.GitData;
+import rosa.ribeiro.jonas.dto.GitData;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package rosa.ribeiro.jonas.dados;
+package rosa.ribeiro.jonas.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
