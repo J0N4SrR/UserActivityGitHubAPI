@@ -11,7 +11,7 @@ public class DataUtil {
         switch (i){
             case 1:
             for(GitData dado : gitData){
-                if(dado.getType().equalsIgnoreCase("PushEvent")){
+                if(dado.type().equalsIgnoreCase("PushEvent")){
                     contaPush++;
                 }
             }
@@ -19,7 +19,7 @@ public class DataUtil {
 
             case 2:
             for(GitData dado : gitData){
-                if(dado.getType().equalsIgnoreCase("CreateEvent")){
+                if(dado.type().equalsIgnoreCase("CreateEvent")){
                     contaPush++;
                 }
             }
@@ -27,7 +27,7 @@ public class DataUtil {
 
             default:
             for(GitData dado : gitData){
-                if(dado.getType().equalsIgnoreCase("CreateEvent") || dado.getType().equalsIgnoreCase("PushEvent")){
+                if(dado.type().equalsIgnoreCase("CreateEvent") || dado.type().equalsIgnoreCase("PushEvent")){
                     contaPush++;
                 }
             }
@@ -40,8 +40,8 @@ public class DataUtil {
         List<String> nome = new ArrayList<String>();
 
         for(GitData dado : gitData){
-            if(!nome.contains(dado.getActor().getLogin())){
-            nome.add(dado.getActor().getLogin());
+            if(!nome.contains(dado.actor().login())){
+            nome.add(dado.actor().login());
             }
         }
 
