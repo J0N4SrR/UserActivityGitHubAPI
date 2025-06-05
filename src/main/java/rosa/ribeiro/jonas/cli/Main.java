@@ -15,6 +15,5 @@
             for(GitData dado : gitHubService.PegarAtividadesRecentes(usuario)){
                 System.out.println(dado);
             }
-
         }
     }

@@ -5,16 +5,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true )
 public class GitData {
-    private String id;
-    private String type;
-    private Ator actor;
-    private Repo repo;
-    private Payload payload;
+    private final String id;
+    private final String type;
+    private final Ator actor;
+    private final Repo repo;
+    private final Payload payload;
     @JsonProperty("public")
-    public boolean isPublic;
-    private String created_at;
+    private final boolean isPublic;
+    private final String created_at;
 
-    public GitData() {
+    public GitData(@JsonProperty("id") String id,
+                   @JsonProperty("type") String type,
+                   @JsonProperty("actor") Ator actor,
+                   @JsonProperty("repo") Repo repo,
+                   @JsonProperty("payload") Payload payload,
+                   @JsonProperty("public") boolean isPublic,
+                   @JsonProperty("created_at") String created_at ) {
+        this.id = id;
+        this.type = type;
+        this.actor = actor;
+        this.repo = repo;
+        this.payload = payload;
+        this.isPublic = isPublic;
+        this.created_at = created_at;
     }
 
     @Override
@@ -26,55 +39,27 @@ public class GitData {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public String getType() {
         return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public Ator getActor() {
         return actor;
     }
 
-    public void setActor(Ator actor) {
-        this.actor = actor;
-    }
-
     public Repo getRepo() {
         return repo;
-    }
-
-    public void setRepo(Repo repo) {
-        this.repo = repo;
     }
 
     public Payload getPayload() {
         return payload;
     }
 
-    public void setPayload(Payload payload) {
-        this.payload = payload;
-    }
-
     public boolean isPublic() {
         return isPublic;
     }
 
-    public void setPublic(boolean aPublic) {
-        isPublic = aPublic;
-    }
-
     public String getCreated_at() {
         return created_at;
-    }
-
-    public void setCreated_at(String created_at) {
-        this.created_at = created_at;
     }
 }

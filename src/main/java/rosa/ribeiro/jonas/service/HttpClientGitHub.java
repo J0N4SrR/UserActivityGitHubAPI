@@ -9,6 +9,7 @@ import java.time.Duration;
 
 public class HttpClientGitHub {
     private final HttpClient client;
+    private static final String GITHUB_API_URL = "https://api.github.com/users/";
 
     public HttpClientGitHub() {
         client = HttpClient.newBuilder()
@@ -17,11 +18,10 @@ public class HttpClientGitHub {
     }
 
     private String UriCreate(String usuario){
-        return "https://api.github.com/users/" + usuario + "/events";
+        return GITHUB_API_URL + usuario + "/events";
     }
 
     public String getBody(String usuario) throws IOException, InterruptedException {
-
 
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(UriCreate(usuario)))

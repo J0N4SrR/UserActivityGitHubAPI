@@ -15,7 +15,7 @@ public class DataUtil {
                     contaPush++;
                 }
             }
-            break;
+
 
             case 2:
             for(GitData dado : gitData){
@@ -23,7 +23,7 @@ public class DataUtil {
                     contaPush++;
                 }
             }
-            break;
+
 
             default:
             for(GitData dado : gitData){
@@ -31,7 +31,7 @@ public class DataUtil {
                     contaPush++;
                 }
             }
-            break;
+
         }
         return contaPush;
     }
