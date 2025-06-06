@@ -57,7 +57,11 @@ This project is a simple Command Line Interface (CLI) application developed in J
         Digite o usuário:
         ```
 ## Example Output
-
--Pushed 3 commits to kamranahmedse/developer-roadmap
--Opened a new issue in kamranahmedse/developer-roadmap
--Starred kamranahmedse/developer-roadmap
+ ```
+- IssueCommentEvent - kamranahmedse/developer-roadmap
+- Pushed 1 commits to kamranahmedse/developer-roadmap
+- PullRequestEvent - kamranahmedse/developer-roadmap
+- PullRequestEvent - kamranahmedse/developer-roadmap
+- Pushed 1 commits to kamranahmedse/developer-roadmap
+- Pushed 20 commits to kamranahmedse/developer-roadmap
+ ```

@@ -15,22 +15,22 @@ public class DataUtil {
             switch (opc){
                 case "pushevent":
 
-                    mensagemPushevent = "\n" + String.format(" -Pushed %d commits to %s", dado.payload().commits().size(), dado.repo().name());
+                    mensagemPushevent = "\n" + String.format("- Pushed %d commits to %s", dado.payload().commits().size(), dado.repo().name());
                     System.out.printf(mensagemPushevent);
                     break;
 
                 case "createevent":
-                    mensagemCreatevent = "\n" + String.format(" -Opened a new issue in %s", dado.repo().name());
+                    mensagemCreatevent = "\n" + String.format("- Opened a new issue in %s", dado.repo().name());
                     System.out.printf(mensagemCreatevent);
                     break;
 
                 case "watchevent":
-                    mensagemWatchevent = "\n" + String.format(" -Starred %s", dado.repo().name());
+                    mensagemWatchevent = "\n" + String.format("- Starred %s", dado.repo().name());
                     System.out.printf(mensagemWatchevent);
                     break;
 
                 default:
-                    mensagemDefault = "\n" + String.format("%s - %s", dado.type(), dado.repo().name());
+                    mensagemDefault = "\n" + String.format("- %s - %s", dado.type(), dado.repo().name());
                     System.out.printf(mensagemDefault);
                     break;
             }
