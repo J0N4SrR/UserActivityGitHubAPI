@@ -53,8 +53,8 @@ This project is a simple Command Line Interface (CLI) application developed in J
         ```
         *Expected output:*
         ```
-        Você não passou o username como argumento!
-        Digite o usuário:
+        You did not pass the username as an argument!
+        Enter username:
         ```
 ## Example Output
  ```
